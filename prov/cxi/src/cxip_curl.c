@@ -272,8 +272,8 @@ void cxip_curl_fini(void)
 {
 	cxip_curl_count = 0;
 	if (cxip_curlm) {
-		(*dl_curl_multi_cleanup)(cxip_curlm);
-		(*dl_curl_global_cleanup)();
+//		(*dl_curl_multi_cleanup)(cxip_curlm);
+//		(*dl_curl_global_cleanup)();
 		cxip_curlm = NULL;
 	}
 }
