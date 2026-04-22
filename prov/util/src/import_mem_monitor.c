@@ -111,7 +111,7 @@ static void ofi_import_monitor_unsubscribe(struct ofi_mem_monitor *notifier,
 					   const void *addr, size_t len,
 					   union ofi_mr_hmem_info *hmem_info)
 {
-	assert(impmon.impfid);
+	if (!impmon.impfid) return;
 	impmon.impfid->export_ops->unsubscribe(impmon.impfid, addr, len);
 }
 
